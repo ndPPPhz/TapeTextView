@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TapeTextViewReadme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D08-oF-MeI">
+                                <rect key="frame" x="52" y="363.5" width="310.5" height="179"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="IYD-Od-Rqw">
+                                <rect key="frame" x="94" y="558.5" width="226.5" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Degrees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHY-Vi-B0r">
+                                        <rect key="frame" x="0.0" y="0.0" width="64.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="oAe-cM-Rsx">
+                                        <rect key="frame" x="74.5" y="0.0" width="154" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="0vZ-Xd-ofE"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="degreesSliderChangedValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="0eJ-6l-zCd"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="cd5-S2-jGg">
+                                <rect key="frame" x="107.5" y="604.5" width="213" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vu6-lx-aJ0">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="I73-JH-A9O">
+                                        <rect key="frame" x="61" y="0.0" width="154" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="gJh-Da-xPR"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="heightSliderChangedValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="mLf-s9-7tT"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cd5-S2-jGg" firstAttribute="top" secondItem="IYD-Od-Rqw" secondAttribute="bottom" constant="16" id="1Zr-EP-zFC"/>
+                            <constraint firstItem="D08-oF-MeI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JEz-N7-i0U"/>
+                            <constraint firstItem="I73-JH-A9O" firstAttribute="centerX" secondItem="oAe-cM-Rsx" secondAttribute="centerX" id="KHy-EW-ISc"/>
+                            <constraint firstItem="D08-oF-MeI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="OSb-A1-RC5"/>
+                            <constraint firstItem="D08-oF-MeI" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="TZo-te-oRg"/>
+                            <constraint firstItem="D08-oF-MeI" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="UTQ-mS-5dT"/>
+                            <constraint firstItem="IYD-Od-Rqw" firstAttribute="top" secondItem="D08-oF-MeI" secondAttribute="bottom" constant="16" id="eDp-8z-aZb"/>
+                            <constraint firstItem="IYD-Od-Rqw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rcM-zI-iL4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tapeTextViewContainerView" destination="D08-oF-MeI" id="N1O-xG-YB5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+</document>
