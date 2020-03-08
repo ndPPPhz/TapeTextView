@@ -9,6 +9,30 @@
 
 ---
 
+## Installation
+
+### Cocoapods
+
+Install [Cocoapods](https://cocoapods.org/#install) if need be.
+
+```bash
+$ gem install cocoapods
+```
+
+Add `TapeTextView` in your `Podfile`.
+
+```ruby
+use_frameworks!
+
+pod 'TapeTextView'
+```
+
+Then, run the following command.
+
+```bash
+$ pod install
+```
+
 ## Initialization
 
 - With Autolayout
